@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfac585c-6266-4913-8472-0186b6da9635" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/RecipeDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/inwon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/time.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/who.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipe-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/recipe-server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipe.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RecipiDetail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Chef.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Chef.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RecipeDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RecipeDetail.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -44,6 +49,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sist\WebstormProjects\week-router-hooks-project\public" />
       <recent name="C:\Users\sist\WebstormProjects\week-router-hooks-project\src\components" />
     </key>
   </component>
@@ -85,6 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590798120374</updated>
       <workItem from="1590798123047" duration="14725000" />
+      <workItem from="1590818795999" duration="6718000" />
     </task>
     <task id="LOCAL-00001" summary="리액트4주">
       <created>1590805556600</created>
@@ -93,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590805556600</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="리액트4주">
+      <created>1590818875947</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590818875947</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,10 +126,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="943" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590809894871" />
-    <state x="816" y="116" key="CommitChangelistDialog2" timestamp="1590805555498">
+    <state x="816" y="116" key="CommitChangelistDialog2" timestamp="1590818874213">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="816" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590805555498" />
+    <state x="816" y="116" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590818874213" />
     <state x="1045" y="416" key="Github.ShareDialog" timestamp="1590805517114">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -136,9 +150,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1280" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1590805782643" />
-    <state x="805" y="258" key="Vcs.Push.Dialog.v2" timestamp="1590805558904">
+    <state x="805" y="258" key="Vcs.Push.Dialog.v2" timestamp="1590818879391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="805" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590805558904" />
+    <state x="805" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590818879391" />
   </component>
 </project>

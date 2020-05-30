@@ -30,7 +30,7 @@ app.get('/recipe',(request,response)=>{
 
     var page=request.query.page;
     var rowSize=12;
-    var skip=(page-1)*rowSize;
+    var skip=(page*rowSize)-rowSize;
     /*
         1page => skip=0
         2page => 12개 버림->13번부터
@@ -69,6 +69,61 @@ app.get('/recipe_detail',(request,response)=>{
         db.collection('recipe_detail').find({no:Number(no)}).toArray((err,detail)=>{
             response.json(detail[0]);
             client.close();
+        })
+    })
+})
+
+app.get('/chef',(request,response)=>{
+    //request => 사용자가 보내주 요청정보 : page,id,pwd
+    //요청 처리
+    //결과 전송
+
+    var page=request.query.page;
+    var rowSize=50;
+    var skip=(page*rowSize)-rowSize;
+    /*
+        1page => skip=0
+        2page => 12개 버림->13번부터
+    */
+
+    var url="mongodb://211.238.142.181:27017"; // 몽고디비 주소
+    Client.connect(url,(err,client)=>{
+        var db=client.db('mydb');
+        db.collection('chef').find({}).skip(skip).limit(rowSize)
+            .toArray((err,docs)=>{
+                // docs라는 오브젝트로 배열데이터를 묶음
+                response.json(docs);
+                console.log(docs)
+                client.close();
+            })
+    })
+})
+
+app.get('/chef_total',(request,response)=>{
+    var url="mongodb://211.238.142.181:27017";
+    Client.connect(url,(err,client)=>{
+        var db=client.db('mydb');
+        db.collection('chef').find({}).count((err,count)=>{
+            response.json({total:Math.ceil(count/50.0)})
+            client.close();
+            return count;
+        })
+    })
+})
+
+const xml2js = require("xml2js")
+const request = require("request")
+//외부서버에서 데이터 읽어올때 사용
+app.get('/recipe_news',(req,res)=>{
+    var query=encodeURIComponent("야구");
+    var url="http://newssearch.naver.com/search.naver?where=rss&query="+query;
+    var parser = new xml2js.Parser({
+        //xml을 json으로 변경하는 파서기
+        explicitArray:false
+    })
+    request({url:url},(err,request,xml)=>{
+        parser.parseString(xml,function(err,pJson){
+            console.log(pJson.rss.channel.item)
         })
     })
 })
