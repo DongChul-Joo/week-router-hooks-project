@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
 import Header from "./components/Header";
 import Recipe from "./components/Recipe";
-import RecipeDetail from "./components/RecipiDetail";
+import RecipeDetail from "./components/RecipeDetail";
 import Chef from "./components/Chef";
 import ChefDetail from "./components/ChefDetail";
 import RecipeFind from "./components/RecipeFind";
@@ -16,7 +16,7 @@ function App() {
            <div className={"jumbotron"}>
              <Switch>
                 <Route exact path={"/"} component={Recipe}/>
-                <Route path={"/recipe_detail"} component={RecipeDetail}/>
+                <Route path={"/recipe_detail/:no"} component={RecipeDetail}/>
                 <Route path={"/chef"} component={Chef}/>
                 <Route path={"/chef_detail"} component={ChefDetail}/>
                 <Route path={"/news"} component={RecipeNews}/>

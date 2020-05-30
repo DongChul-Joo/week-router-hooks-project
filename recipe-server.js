@@ -36,7 +36,7 @@ app.get('/recipe',(request,response)=>{
         2page => 12개 버림->13번부터
     */
 
-    var url="mongodb://211.238.142.181.27017"; // 몽고디비 주소
+    var url="mongodb://211.238.142.181:27017"; // 몽고디비 주소
     Client.connect(url,(err,client)=>{
         var db=client.db('mydb');
         db.collection('recipe').find({}).skip(skip).limit(rowSize)
@@ -46,5 +46,29 @@ app.get('/recipe',(request,response)=>{
                 console.log(docs)
                 client.close();
             })
+    })
+})
+
+app.get('/recipe_total',(request,response)=>{
+    var url="mongodb://211.238.142.181:27017";
+    Client.connect(url,(err,client)=>{
+        var db=client.db('mydb');
+        db.collection('recipe').find({}).count((err,count)=>{
+          response.json({total:Math.ceil(count/12.0)})
+          client.close();
+          return count;
+        })
+    })
+})
+
+app.get('/recipe_detail',(request,response)=>{
+    var url="mongodb://211.238.142.181:27017";
+    var no=request.query.no;
+    Client.connect(url,(err,client)=>{
+        var db=client.db('mydb');
+        db.collection('recipe_detail').find({no:Number(no)}).toArray((err,detail)=>{
+            response.json(detail[0]);
+            client.close();
+        })
     })
 })
